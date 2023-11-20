@@ -89,6 +89,7 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    gravtastic (3.2.6)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -211,6 +212,7 @@ DEPENDENCIES
   debug
   devise
   devise-bootstrap-views (~> 1.0)
+  gravtastic
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
