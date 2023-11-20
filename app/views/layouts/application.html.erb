@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render 'layouts/shared/navbar' %>
+    <% end %>
     <div class="container">
       <%= render 'layouts/shared/alerts' %>
       <%= yield %>
