@@ -26,4 +26,9 @@ class User < ApplicationRecord
 
   has_many :companies
   has_many :roles
+  has_many :assigned_companies, through: :roles, source: :company
+
+  def accessible_companies
+    assigned_companies
+  end
 end

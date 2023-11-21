@@ -36,10 +36,17 @@
     </div>
 
   <%% else %>
-    <div class="bg-white rounded shadow flex items-center justify-between p-8">
-      <div class="flex-1 text-center">
-        <p class="text-xl font-semibold mb-4">Create your first <%= singular_table_name.titleize %></p>
-      <%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path, class: "btn btn-default" %>
+    <div class="card text-center">
+      <div class="card-header">
+        Ooops!!!
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">No <%= plural_table_name.titleize %> found</h5>
+        <p class="card-text">No <%= plural_table_name.titleize %> to list. Please add a new one!</p>
+        <%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path, class: "btn btn-primary" %>
+      </div>
+      <div class="card-footer text-muted">
+        0 <%= plural_table_name.titleize %> found
       </div>
     </div>
   <%% end %>
