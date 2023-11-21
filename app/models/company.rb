@@ -22,6 +22,7 @@
 #
 class Company < ApplicationRecord
   belongs_to :user
+  has_many :roles, dependent: :destroy
 
   validates :name, presence: true
 end

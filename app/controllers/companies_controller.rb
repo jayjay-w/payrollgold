@@ -26,6 +26,10 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
+        @company.roles.create(
+          user: current_user,
+          access_level: :admin
+        )
         format.html { redirect_to edit_company_path(@company), notice: "Company was successfully created." }
         format.json { render :show, status: :created, location: @company }
       else
